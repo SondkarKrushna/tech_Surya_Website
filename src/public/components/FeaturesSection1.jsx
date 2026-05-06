@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import techImage from "../../assets/tech.png";
+import techImage from "../../assets/tech1.png";
+import techBgImage from "../../assets/techbg.png";
 
 const FeaturesSection1 = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -183,35 +184,54 @@ const FeaturesSection1 = () => {
             </h2>
           </div>
 
-          {/* ---- CENTER: Rotating tech.png Image ---- */}
-          <motion.div
-  animate={{ rotate: 360 }}
-  transition={{
-    duration: 30,
-    repeat: Infinity,
-    ease: "linear",
-  }}
-  className="
-    w-[180px] h-[180px]
-    xs:w-[220px] xs:h-[220px]
-    sm:w-[280px] sm:h-[280px]
-    md:w-[380px] md:h-[380px]
-    lg:w-[500px] lg:h-[500px]
-    xl:w-[620px] xl:h-[620px]
-    2xl:w-[700px] 2xl:h-[700px]
-    flex-shrink-0
-    mx-auto
-    translate-x-40 md:translate-x-64 lg:translate-x-80 xl:translate-x-[22rem]
-    lg:-mt-20
-    xl:-mt-24
-  "
->
+          {/* ---- CENTER: Tech Stack Images (Static Bg + Rotating Fg) ---- */}
+          <div
+            className="
+              relative
+              w-[180px] h-[180px]
+              xs:w-[220px] xs:h-[220px]
+              sm:w-[280px] sm:h-[280px]
+              md:w-[380px] md:h-[380px]
+              lg:w-[500px] lg:h-[500px]
+              xl:w-[620px] xl:h-[620px]
+              2xl:w-[700px] 2xl:h-[700px]
+              flex-shrink-0
+              mx-auto
+            "
+          >
+            {/* Static Background Image */}
             <img
-              src={techImage}
-              alt="Our Tech Stack - Technologies we work with"
-              className="w-full h-full object-contain"
+              src={techBgImage}
+              alt="Tech Background"
+              className="absolute inset-0 w-full h-full object-contain z-0"
             />
-          </motion.div>
+
+            {/* Rotating Front Image */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 30,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="absolute inset-0 w-full h-full z-10"
+            >
+              <img
+                src={techImage}
+                alt="Our Tech Stack - Technologies we work with"
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
+
+            {/* Center Text */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-20">
+              <div className="font-orbitron text-center leading-tight">
+                <div className="text-white text-base sm:text-xl md:text-3xl lg:text-[40px] font-semibold tracking-wider">Our</div>
+                <div className="text-[#FF7200] text-base sm:text-xl md:text-3xl lg:text-[40px] font-semibold tracking-wider mt-1 md:mt-3">Tech</div>
+                <div className="text-[#0473EF] text-base sm:text-xl md:text-3xl lg:text-[40px] font-semibold tracking-wider mt-1 md:mt-3">Stack</div>
+              </div>
+            </div>
+          </div>
 
           {/* ---- BOTTOM RIGHT: Description Text ---- */}
           <div className="absolute bottom-16 md:bottom-20 right-0 md:-right-6 lg:-right-10 z-20 max-w-[320px] lg:max-w-[360px]">
