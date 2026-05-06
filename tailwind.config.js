@@ -9,6 +9,8 @@ export default {
       fontFamily: {
         dmsans: ['"DM Sans"', "sans-serif"],
         iceland: ['Iceland', 'cursive'],
+        orbitron: ['Orbitron', 'sans-serif'],
+        michroma: ['Michroma', 'sans-serif'],
       },
       animation: {
         marquee: "marquee 25s linear infinite",
