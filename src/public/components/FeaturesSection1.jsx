@@ -60,9 +60,9 @@ const FeaturesSection1 = () => {
             Our Features
           </span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-semibold mt-8 max-w-4xl mx-auto leading-snug font-iceland">
-          <span className="text-blue-500">A structured</span> approach to
-          design, build and launch scalable{" "}
+        <h2 className="text-4xl md:text-6xl font-semibold mt-8 max-w-5xl mx-auto leading-[1.1] font-iceland px-4">
+          <span className="text-blue-500">A structured approach</span> to design, build <br />
+          and launch scalable{" "}
           <span className="relative inline-block mt-2 md:mt-0">
             digital solutions.
             <span className="absolute left-0 w-full -bottom-6 md:-bottom-12">
@@ -253,7 +253,6 @@ const FeaturesSection1 = () => {
           <video
             className="w-full h-auto object-cover"
             autoPlay
-            muted
             loop
             playsInline
           >

@@ -293,7 +293,7 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-6xl mx-auto text-center mb-16 font-iceland px-4 md:px-0">
-          <h2 className="text-4xl md:text-6xl tracking-tight mb-4 leading-tight md:leading-normal">
+          <h2 className="text-4xl md:text-6xl tracking-tight mb-4 leading-tight md:leading-[1.0]">
             <span className="text-blue-500 whitespace-nowrap block md:inline">
               Powerful capabilities
             </span>{" "}
@@ -365,7 +365,7 @@ const FeaturesSection = () => {
 
         {/* **************************** */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6 auto-rows-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 auto-rows-[400px]">
           {cards.map((card, index) => {
             const isEven = index % 2 === 0;
 

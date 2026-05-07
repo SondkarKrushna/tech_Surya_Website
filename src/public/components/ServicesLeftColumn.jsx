@@ -12,27 +12,20 @@ const ServicesLeftColumn = ({ services, currentIndex, totalServices }) => {
         {services.map((_, i) => (
           <div
             key={i}
-            className={`h-[3px] rounded-full transition-all duration-500 ${
-              i === currentIndex
-                ? "w-6 sm:w-8 bg-[#3b82f6]"
-                : i < currentIndex
-                  ? "w-3 sm:w-4 bg-[#3b82f6] opacity-40"
-                  : "w-3 sm:w-4 bg-gray-700"
-            }`}
+            className={`h-[3px] rounded-full  transition-all duration-500 ${i === currentIndex
+              ? "w-6 sm:w-8 bg-[#3b82f6]"
+              : i < currentIndex
+                ? "w-3 sm:w-4 bg-[#3b82f6] opacity-40"
+                : "w-3 sm:w-4 bg-gray-700"
+              }`}
           />
         ))}
       </div>
 
-      {/* ── Counter ── */}
-      <p className="text-gray-600 text-xs sm:text-sm font-dmsans mb-3 sm:mb-4">
-        {String(currentIndex + 1).padStart(2, "0")} / {String(totalServices).padStart(2, "0")}
-      </p>
-
       {/* ── Content ── */}
       <div key={service.id} className="animate-fadeIn">
-
         {/* Category + Icon */}
-        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+        <div className="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-14">
           <img
             src="/robot.gif"
             alt={`${service.category} Icon`}
@@ -44,7 +37,7 @@ const ServicesLeftColumn = ({ services, currentIndex, totalServices }) => {
         </div>
 
         {/* Title */}
-        <h3 className="text-base sm:text-xl md:text-[26px] lg:text-[30px] font-normal mb-3 sm:mb-5 uppercase font-dmsans ">
+        <h3 className="text-base sm:text-xl md:text-[26px] lg:text-[30px] font-normal mb-8  sm:mb-12 uppercase font-dmsans leading-relaxed tracking-normal mt-3 " style={{ lineHeight: "normal" }}>
           {service.title}
         </h3>
 

@@ -310,7 +310,7 @@ const servicesData = [
   {
     id: 6,
     category: "ERP Systems",
-    title: "Smart business management in\none platform.",
+    title: "Smart business   management in\none platform.",
     description:
       "Our ERP solutions help manage operations, inventory, finance and workflows efficiently with centralized control.",
     benefits: [
@@ -379,7 +379,7 @@ const Salution = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [totalServices]);
 
-  
+
   const scrollHeight = `${totalServices * 100}vh`;
 
   return (
@@ -399,14 +399,14 @@ const Salution = () => {
             </button>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-[50px] font-medium tracking-wide text-center leading-tight font-iceland px-2">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-wide text-center leading-[1.4] font-iceland px-2">
             <span className="text-[#3b82f6] relative inline-block mb-3 md:mb-0">
               Solutions
               <span className="absolute bottom-0  left-0 w-full h-[3px] ">
                 <img src="/Group5.svg" alt="Underline" />
               </span>
             </span>{" "}
-            Designed For Real Business Growth
+            We Deliver
           </h1>
 
           <p className="text-gray-400 text-sm md:text-base text-center font-dmsans mt-4 px-2">
@@ -451,11 +451,10 @@ const Salution = () => {
                     key={index}
                     src={src}
                     alt={`Slide ${index + 1}`}
-                    className={`absolute inset-0 w-full h-full object-contain transition-all duration-[800ms] ease-in-out transform-gpu ${
-                      currentIndex === index
-                        ? "scale-100 opacity-100 z-20"
-                        : "scale-75 opacity-0 z-10"
-                    }`}
+                    className={`absolute inset-0 w-full h-full object-contain transition-all duration-[800ms] ease-in-out transform-gpu ${currentIndex === index
+                      ? "scale-100 opacity-100 z-20"
+                      : "scale-75 opacity-0 z-10"
+                      }`}
                   />
                 ))}
               </div>
@@ -483,7 +482,6 @@ const Salution = () => {
         <video
           className="w-full h-auto object-cover"
           autoPlay
-          muted
           loop
           playsInline
         >
