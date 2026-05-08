@@ -1,0 +1,31 @@
+.swiper {
+  overflow: hidden;
+  position: relative;
+  background: black;
+  --v-offset: 100px;
+  --curve-height: 300px;
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: 10;
+    display: block;
+    background: black;
+    width: calc(100% + 2 * var(--v-offset));
+    height: var(--curve-height);
+    position: absolute;
+    border-radius: 100%;
+    left: calc(-1 * var(--v-offset));
+    pointer-events: none;
+  }
+
+  &::before {
+    top: calc(-0.7 * var(--curve-height));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  &::after {
+    bottom: calc(-0.7 * var(--curve-height));
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+  }
+}
